@@ -1,0 +1,18 @@
+function findEvenIndex(arr)
+{
+    let right=arr.reduce((a,b)=>a+b);
+    let left=0;
+    let z=finder()
+    if(z==undefined){return -1}
+    else{return z};
+    function finder(){
+
+        for(let i =0;i<arr.length;i++){
+            right=right - arr[i];
+            if(right==left){
+                return i;
+            }
+            left=left+arr[i];
+        }
+    }
+}
