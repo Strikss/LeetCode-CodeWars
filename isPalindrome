@@ -1,19 +1,17 @@
-var isPalindrome = function(x) {
-    
-    var xToString=x.toString();
-    var xToArray=xToString.split('')
-    var length=xToArray.length;
-    
-    var newarray=[]
-    for(let i=length-1;i>=0;i--)
-    {
-        newarray.push(xToArray[i]);
+ let isPalindrome=(x)=> {
+    let xStr =x.toString();
+    let xArr =xStr.split("");
+    let newArr =[];
+    for(let i=xArr.length-1;i>=0;i--){
+    newArr.push(xArr[i]);
     }
-    var newString=newarray.join('')
-    var newNumber=parseInt(newString)
+    newArr=newArr.join('')
     
-    if(newNumber===x){
-         return true
-    }else
+    if (x==parseInt(newArr)){
+        return true
+    }
+    else{
         return false
+    }
 };
+console.log(isPalindrome(121))
